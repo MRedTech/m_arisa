@@ -7,10 +7,10 @@
   
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://mredtech01.edreborn86.workers.dev" crossorigin>
-  <link rel="dns-prefetch" href="//mredtech01.edreborn86.workers.dev">
-  <link rel="preconnect" href="https://secure-entry-vision.edreborn86.workers.dev" crossorigin>
-  <link rel="dns-prefetch" href="//secure-entry-vision.edreborn86.workers.dev">
+  <link rel="preconnect" href="https://m-arisa.edreborn86.workers.dev" crossorigin>
+  <link rel="dns-prefetch" href="//m-arisa.edreborn86.workers.dev">
+  <link rel="preconnect" href="https://secure-entry-vision05.edreborn86.workers.dev" crossorigin>
+  <link rel="dns-prefetch" href="//secure-entry-vision05.edreborn86.workers.dev">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -843,7 +843,7 @@
 
   <div class="image-container" id="imageContainer">
     <img id="preview" src="#" alt="IMAGE PREVIEW">
-    <div class="watermark">SENSORY USE ONLY</div>
+    <div class="watermark">M ARISA USE ONLY</div>
   </div>
 
   <form id="registrationForm" autocomplete="off">
@@ -987,8 +987,8 @@
     /* =========================
        CONFIG / CONSTANTS
     ========================= */
-    const WORKER_URL = "https://mredtech01.edreborn86.workers.dev/";
-    const OCR_WORKER_URL = "https://secure-entry-vision.edreborn86.workers.dev";
+    const WORKER_URL = "https://m-arisa.edreborn86.workers.dev/";
+    const OCR_WORKER_URL = "https://secure-entry-vision05.edreborn86.workers.dev";
 
     // Preview display ratio used by adjustPreviewSize() (maxHeight = width * ratio)
     const PREVIEW_MAX_RATIO = 0.78;
@@ -1147,7 +1147,7 @@
     }
 
     function drawWatermarkOnCanvas(ctx, w, h){
-      const text = "SENSORY USE ONLY";
+      const text = "M ARISA USE ONLY";
       ctx.save();
       ctx.translate(w * 0.5, h * 0.5);
       ctx.rotate(-40 * Math.PI / 180);
