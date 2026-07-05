@@ -1820,6 +1820,10 @@
           const result = await res.json();
           document.body.style.cursor = 'default';
           
+          if (result.manual) {
+            throw new Error(result.message || "OCR service is temporarily unavailable. Please enter details manually.");
+          }
+
           if (result.error) {
             throw new Error("AI Message: " + result.message);
           }
@@ -1956,6 +1960,10 @@
             const result = await res.json();
             document.body.style.cursor = 'default';
 
+            if (result.manual) {
+              throw new Error(result.message || "OCR service is temporarily unavailable. Please enter details manually.");
+            }
+
             if (result.error) {
               throw new Error("AI Message: " + result.message);
             }
@@ -1965,6 +1973,7 @@
               const cleanName = filterNonNameWords(rawName);
               document.getElementById('namePassport').value = cleanName;
             }
+            
             if (result.idnum) {
               const icEl = document.getElementById('mykadPassport');
               if (icEl) {
